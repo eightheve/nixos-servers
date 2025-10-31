@@ -11,6 +11,7 @@
           ./common.nix
           ./hosts/thinkcenter.nix
           ./hardware/thinkcenter-hardware.nix
+          ./wireguard/thinkcenter-wireguard.nix
         ];
       };
 
@@ -20,6 +21,7 @@
           ./common.nix
           ./hosts/vps.nix
           ./hardware/vps-hardware.nix
+          ./wireguard/vps-wireguard.nix
         ];
       };
     };
