@@ -25,14 +25,14 @@
 
   networking.nat = {
     enable = true;
-    externalInterface = "eth0";
+    externalInterface = "enp1s0";
     internalInterfaces = [ "wg0" ];
   };
 
   networking.firewall.extraCommands = ''
     # Forward all inbound TCP and UDP traffic except port 2222
-    iptables -t nat -A PREROUTING -i eth0 -p tcp ! --dport 2222 -j DNAT --to-destination 10.100.0.2
-    iptables -t nat -A PREROUTING -i eth0 -p udp ! --dport 2222 -j DNAT --to-destination 10.100.0.2
+    iptables -t nat -A PREROUTING -i enp1s0 -p tcp ! --dport 2222 -j DNAT --to-destination 10.100.0.2
+    iptables -t nat -A PREROUTING -i enp1s0 -p udp ! --dport 2222 -j DNAT --to-destination 10.100.0.2
     
     # SNAT/MASQUERADE forwarded traffic so return packets go back through the tunnel
     iptables -t nat -A POSTROUTING -o wg0 -j MASQUERADE
