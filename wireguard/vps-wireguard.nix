@@ -13,7 +13,6 @@
       {
         publicKey = "DyANBVsJJpuljhXzxl7zAjIH9Je0Zv9wXUTTmwFtcG8=";
         allowedIPs = [ "10.100.0.2/32" ];
-        persistentKeepalive = 25;
       }
     ];
   };
