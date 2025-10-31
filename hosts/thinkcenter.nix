@@ -17,7 +17,6 @@
         address = "192.168.1.2";
         prefixLength = 24;
       } ];
-      ipv4.gateway = "192.168.1.1";
       useDHCP = false;
     };
   };
