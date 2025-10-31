@@ -12,12 +12,14 @@
     hostName = "BANJO";
 
     networkmanager.enable = true;
-    interfaces.enp1s0f0.ipv4.addresses = [
-      {
+    interfaces.enp1s0f0 = {
+      ipv4.addresses = [ {
         address = "192.168.1.2";
         prefixLength = 24;
-      }
-    ];
+      } ];
+      ipv4.gateway = "192.168.1.1";
+      useDHCP = false;
+    };
   };
 
   time.timeZone = "America/New_York";
