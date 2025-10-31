@@ -14,7 +14,7 @@
         ];
       };
 
-      vps = nixpkgs.lib.nixosSystem {
+      hetzner = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./common.nix
