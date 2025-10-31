@@ -1,4 +1,8 @@
 {
+  environment.systemPackages = with pkgs; [
+    wireguard-tools
+  ];
+
   networking.wireguard.interfaces.wg0 = {
     ips = [ "10.100.0.2/24" ];
     privateKeyFile = "/etc/wireguard/privatekey";
